@@ -1,0 +1,5 @@
+The following console script names have changed:
+
+  nslave => mw-nslave
+  postman => mw-postman
+  nserve => mw-nserve

@@ -1,0 +1,16 @@
+diff -up mwlib-0.15.11/setup.py.orig mwlib-0.15.11/setup.py
+--- mwlib-0.15.11/setup.py.orig	2013-08-18 11:57:48.765786015 -0500
++++ mwlib-0.15.11/setup.py	2013-08-18 11:57:57.955917320 -0500
+@@ -55,9 +55,9 @@ def main():
+         ext_modules.append(Extension(modname, [x]))
+ 
+     console_scripts = [
+-        "nslave = mwlib.main_trampoline:nslave_main",
+-        "postman = mwlib.main_trampoline:postman_main",
+-        "nserve = mwlib.main_trampoline:nserve_main",
++        "mw-nslave = mwlib.main_trampoline:nslave_main",
++        "mw-postman = mwlib.main_trampoline:postman_main",
++        "mw-nserve = mwlib.main_trampoline:nserve_main",
+         "mw-zip = mwlib.apps.buildzip:main",
+         "mw-version = mwlib._version:main",
+         "mw-render = mwlib.apps.render:main",
