@@ -1,0 +1,14 @@
+diff -up mwlib-0.15.11/setup.py.orig mwlib-0.15.11/setup.py
+--- mwlib-0.15.11/setup.py.orig	2013-08-13 02:25:59.313322616 -0400
++++ mwlib-0.15.11/setup.py	2013-08-13 02:26:42.720320777 -0400
+@@ -42,9 +42,9 @@ def main():
+         build_deps()   # this is a git clone
+ 
+     install_requires = [
+-        "pyparsing>=1.4.11,<1.6", "timelib>=0.2", "bottle>=0.10",
++        "pyparsing>=1.4.11", "python-dateutil", "bottle>=0.10",
+         "pyPdf>=1.12", "apipkg>=1.2", "qserve>=0.2.7", "lxml",
+         "py>=1.4", "sqlite3dbm", "simplejson>=2.3", "roman", "gevent",
+         "odfpy>=0.9, <0.10", "Pillow", "setuptools"]
+ 
+     ext_modules = []

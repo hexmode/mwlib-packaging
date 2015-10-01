@@ -1,0 +1,15 @@
+diff -up mwlib-0.13.3/mwlib/templ/magic_time.py.orig3 mwlib-0.13.3/mwlib/templ/magic_time.py
+--- mwlib-0.13.3/mwlib/templ/magic_time.py.orig3	2012-02-02 11:27:46.343812422 -0600
++++ mwlib-0.13.3/mwlib/templ/magic_time.py	2012-02-02 12:04:37.892572142 -0600
+@@ -3,7 +3,10 @@ import datetime
+ import re
+ import calendar
+ import roman
+-from timelib import strtodatetime as parsedate
++try:
++    from timelib import strtodatetime as parsedate
++except ImportError:
++    from dateutil.parser import parse as parsedate
+ 
+ from mwlib.strftime import strftime
+ 
