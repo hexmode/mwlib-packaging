@@ -55,3 +55,7 @@ target/
 *~
 \#*\#
 .\#*
+
+# rpmbuild stuff
+BUILD/
+RPMS/
