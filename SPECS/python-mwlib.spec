@@ -124,6 +124,10 @@ rm %{buildroot}%{python_sitearch}/mwlib/__init__.py
 
 
 %changelog
+* Fri Oct 02 2015 Mark A. Hershberger <mah@nichework.com> - 0.15.14-2
+- Make it build on CentOS 6.7
+- Update patches
+
 * Fri Jan 30 2015 Zbigniew Jędrzejewski-Szmek <zbyszek@in.waw.pl> - 0.15.14-1
 - Update to 0.15.14 and enable tests (#1031279)
 
