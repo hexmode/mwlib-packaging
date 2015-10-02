@@ -59,3 +59,4 @@ target/
 # rpmbuild stuff
 BUILD/
 RPMS/
+BUILDROOT/
