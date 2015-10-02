@@ -10,7 +10,7 @@
 
 
 Name: python-%{srcname}
-Version: 1.3.1
+Version: 0.9.6
 Release: 1
 Summary: %{sum}
 AutoReqProv: no

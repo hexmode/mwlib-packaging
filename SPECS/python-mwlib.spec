@@ -29,6 +29,7 @@ Patch2:         mwlib-prefix-console-scripts.patch
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python-odfpy >= 0.9
+BuildRequires:  python-odfpy <= 1.0
 BuildRequires:  pyPdf >= 1.12
 BuildRequires:  pyparsing >= 1.4.11
 BuildRequires:  python-apipkg >= 1.2
@@ -45,6 +46,7 @@ BuildRequires:  python-sqlite3dbm
 BuildRequires:  pytest
 BuildRequires:  gcc-c++
 Requires:       python-odfpy >= 0.9
+Requires:       python-odfpy <= 1.0
 Requires:       pyPdf >= 1.12
 Requires:       pyparsing >= 1.4.11
 Requires:       python-apipkg >= 1.2
