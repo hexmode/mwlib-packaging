@@ -42,7 +42,6 @@ BuildRequires:  python-py >= 1.4
 BuildRequires:  python-qserve >= 0.2.7
 BuildRequires:  python-simplejson >= 2.3
 BuildRequires:  python-sqlite3dbm
-BuildRequires:  python-roman
 BuildRequires:  pytest
 Requires:       python-odfpy >= 0.9
 Requires:       pyPdf >= 1.12
@@ -59,7 +58,6 @@ Requires:       python-qserve >= 0.2.7
 Requires:       python-setuptools
 Requires:       python-simplejson >= 2.3
 Requires:       python-sqlite3dbm
-Requires:       python-roman
 
 %description
 mwlib provides a library for parsing MediaWiki articles and converting them to
