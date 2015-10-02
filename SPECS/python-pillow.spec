@@ -50,10 +50,6 @@ Vendor: none
 URL: http://python-pillow.github.io/
 Packager: Mark A. Hershberger <mah@nichework.com>
 
-%package -n python2-%{srcname}
-Summary:        %{sum}
-%{?python_provide:%python_provide python2-%{srcname}}
-
 %description
 %{desc}
 
