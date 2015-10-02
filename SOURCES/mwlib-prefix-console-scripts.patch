@@ -14,3 +14,17 @@ diff -up mwlib-0.15.11/setup.py.orig mwlib-0.15.11/setup.py
          "mw-zip = mwlib.apps.buildzip:main",
          "mw-version = mwlib._version:main",
          "mw-render = mwlib.apps.render:main",
+diff -ub mwlib-0.15.14/setup.py.orig mwlib-0.15.14/setup.py
+--- mwlib-0.15.14/setup.py.orig	2013-08-18 11:57:48.765786015 -0500
++++ mwlib-0.15.14/setup.py	2015-10-02 11:57:48.765786015 -0500
+@@ -44,7 +44,7 @@
+     install_requires = [
+         "pyparsing>=1.4.11", "python-dateutil", "bottle>=0.10",
+         "pyPdf>=1.12", "apipkg>=1.2", "qserve>=0.2.7", "lxml",
+-        "py>=1.4", "sqlite3dbm", "simplejson>=2.3", "roman", "gevent",
++        "py>=1.4", "sqlite3dbm", "simplejson>=2.3", "docutils>=0.6", "gevent",
+         "odfpy>=0.9, <0.10", "Pillow", "setuptools"]
+ 
+     ext_modules = []
+
+Diff finished.  Fri Oct  2 16:31:07 2015
