@@ -14,6 +14,7 @@ License:        BSD
 URL:            http://pediapress.com/code/
 Source0:        http://pypi.python.org/packages/source/m/mwlib/%{module_name}-%{version}.zip
 Source1:        README.fedora
+Source2:        mwlib.ini
 
 # Removes the following "requires" from setup.py for these reasons:
 #   roman: part of python-docutils
@@ -61,6 +62,7 @@ Requires:       python-qserve >= 0.2.7
 Requires:       python-setuptools
 Requires:       python-simplejson >= 2.3
 Requires:       python-sqlite3dbm
+Requires:       supervisor >= 3.1.3
 
 %description
 mwlib provides a library for parsing MediaWiki articles and converting them to
@@ -92,8 +94,16 @@ CFLAGS="%{optflags}" %{__python} setup.py build
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
 mkdir -p %{buildroot}%{_datadir}/%{module_name}
 rm %{buildroot}%{python_sitearch}/%{module_name}/templ/*.c
+mkdir -p %{buildroot}/%{_sysconfdir}/supervisord.d
+install -p -m 644 %{SOURCE2} %{buildroot}/%{_sysconfdir}/supervisord.d
 
 cp %{SOURCE1} ./
+
+%post
+mkdir -p /var/cache/mwlib /var/log/mwlib
+chown nobody:nobody /var/cache/mwlib /var/log/mwlib
+chmod 700 /var/cache/mwlib
+test -x /etc/init.d/supervisord && /etc/init.d/supervisord reload
 
 %check
 # imports from mwlib don't work without this for some reason
@@ -122,6 +132,7 @@ rm %{buildroot}%{python_sitearch}/mwlib/__init__.py
 %{_bindir}/mw-*
 %{_datadir}/%{module_name}
 
+%config(noreplace) %{_sysconfdir}/supervisord.d/mwlib.ini
 
 %changelog
 * Fri Oct 02 2015 Mark A. Hershberger <mah@nichework.com> - 0.15.14-2
